@@ -30,6 +30,13 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+.background-glow{
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(closest-side, var(--primary-color), var(--base-background-color))
+}
+
 .nav-link{
   @apply bg-mute py-2 px-4 rounded-xl text-center text-sm hover:bg-primary  md:bg-transparent duration-500;
 }
