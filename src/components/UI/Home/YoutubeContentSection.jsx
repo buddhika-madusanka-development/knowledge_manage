@@ -10,8 +10,6 @@ const YoutubeContentSection = async () => {
         contents = await res.json();
         contents = contents.slice(0, 12);
     }
-
-    console.log(contents);
     
   return (
     <div>

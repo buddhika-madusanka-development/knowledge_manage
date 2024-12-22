@@ -16,7 +16,7 @@ const Header = () => {
           </div>
         </div>
         <div className="nav-section flex flex-col gap-y-2 md:flex-row md:items-center md:bg-mute md:h-fit md:px-10 md:py-3 md:rounded-xl md:block">
-          <Link href={'/content'} className='nav-link'>Contents</Link>
+          <Link href={'/contents'} className='nav-link'>Contents</Link>
           <Link href={'/channel'} className='nav-link'>Channels</Link>
           <Link href={'/roadmap'} className='nav-link'>Road Maps</Link>
         </div>

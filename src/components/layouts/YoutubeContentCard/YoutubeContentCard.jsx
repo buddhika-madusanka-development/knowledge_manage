@@ -11,7 +11,7 @@ const YoutubeContentCard = ({content}) => {
             <iframe src={content?.contentLink} className='w-full aspect-video'></iframe>
 
             <div className="content-details mt-5">
-                <Link href={`/content/${content?.contentId}`}><h1 className='font-bold line-clamp-2'>{content?.contentTitle}</h1></Link>
+                <Link href={`/contents/${content?.contentId}`}><h1 className='font-bold line-clamp-2'>{content?.contentTitle}</h1></Link>
                 <p className='text-sm text-mute line-clamp-3 mt-2'>{content?.contentDescription}</p>
             </div>
 
