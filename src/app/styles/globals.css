@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -25,4 +27,9 @@
 body{
   background-color: var(--base-background-color);
   color: var(--base-text-color);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-link{
+  @apply bg-mute py-2 px-4 rounded-xl text-center text-sm hover:bg-primary  md:bg-transparent duration-500;
 }
