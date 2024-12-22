@@ -40,3 +40,17 @@ body{
 .nav-link{
   @apply bg-mute py-2 px-4 rounded-xl text-center text-sm hover:bg-primary  md:bg-transparent duration-500;
 }
+
+.channel-card{
+  box-shadow: 4px 4px var(--primary-color);
+}
+
+.channel-card:hover{
+  box-shadow: 8px 8px var(--primary-color);
+  transition: all ease 400ms;
+}
+
+.youtube-content-card:hover{
+  box-shadow: 4px 4px var(--primary-color);
+  transition: all ease 400ms;
+}
