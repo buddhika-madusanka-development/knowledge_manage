@@ -9,8 +9,10 @@ const layout = ({children}) => {
         {/* Import header */}
         <Header />
         
-        {/* render children components */}
-        {children}
+        <div className='w-11/12 mx-auto'>
+          {/* render children components */}
+          {children}
+        </div>
 
         <div className='mt-auto'>
             {/* Import footer */}
