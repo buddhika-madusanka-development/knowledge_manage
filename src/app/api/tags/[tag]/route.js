@@ -20,7 +20,7 @@ export const GET = async (req, {params}) => {
         await dbConnect();
 
         // access data from database
-        const tagContent = await Content.find({Tags : {$all : [tag]}}).limit(4);
+        const tagContent = await Content.find({Tags : {$all : [tag]}}).limit(5);
 
         return NextResponse.json(tagContent, {status : 200});
         

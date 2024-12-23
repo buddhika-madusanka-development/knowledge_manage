@@ -54,7 +54,7 @@ const page = async ({params}) => {
       <div className="mt-16">
         <HighliteTitle title={'Related'} hightliteText={'Contents'} />
         <div className="contents">
-          <RelatedContentSection />
+          <RelatedContentSection tag={content?.Tags} contentId={content?.contentId}/>
         </div>
       </div>
       
