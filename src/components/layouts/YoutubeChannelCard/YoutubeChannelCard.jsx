@@ -16,7 +16,7 @@ const YoutubeChannelCard = ({channel}) => {
                 className='rounded-full'
             />
             <h3 className='font-semibold text-lg line-clamp-2'>{channel?.channelName}</h3>
-            <p className='text-sm text-mute line-clamp-2'>{channel?.channelDescrition}</p>
+            <p className='text-sm text-mute line-clamp-2'>{channel?.channelDescription}</p>
         </Link>
     )
     

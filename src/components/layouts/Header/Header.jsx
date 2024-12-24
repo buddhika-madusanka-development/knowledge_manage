@@ -1,10 +1,14 @@
+'use client'
+
 import { Logo } from '@/components/common/Logo'
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react'
 
 import { HiMenu } from "react-icons/hi";
 
 const Header = () => {
+  
   return (
     <div className='min-h-20 w-11/12 mx-auto md:flex md:justify-between md:items-center'>
         <div className='flex justify-between h-20 items-center'>
@@ -19,9 +23,11 @@ const Header = () => {
           <Link href={'/contents'} className='nav-link'>Contents</Link>
           <Link href={'/channel'} className='nav-link'>Channels</Link>
           <Link href={'/roadmap'} className='nav-link'>Road Maps</Link>
+          
         </div>
     </div>
   )
 }
+
 
 export default Header

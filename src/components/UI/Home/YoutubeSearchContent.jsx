@@ -45,14 +45,6 @@ const YoutubeSearchContent = async ({query}) => {
             <div className="youtube-content-section mt-16">
               {/* youtube content section */}
               <YoutubeContentSection />
-            </div><div className="youtube-channel-section">
-              {/* youtube channel section */}
-              <YoutubeChannelSection />
-            </div>
-
-            <div className="youtube-content-section mt-16">
-              {/* youtube content section */}
-              <YoutubeContentSection />
             </div>
           </>
         )

@@ -4,7 +4,8 @@ const channelSchema = new Schema({
     channelId : String,
     channelName : String,
     channelLink : String,
-    channelDescription : String
+    channelDescription : String,
+    channelImage : String
 })
 
 const Channel = mongoose.models.Channel || mongoose.model("Channel", channelSchema);
