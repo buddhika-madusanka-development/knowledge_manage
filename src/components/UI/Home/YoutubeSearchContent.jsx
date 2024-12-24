@@ -1,3 +1,4 @@
+import ContentNotFoundError from '@/components/common/ContentNotFoundError';
 import HighliteTitle from '@/components/common/Titles/HighliteTitle'
 import YoutubeContentCard from '@/components/layouts/YoutubeContentCard/YoutubeContentCard';
 import YoutubeChannelSection from "@/components/UI/Home/YoutubeChannelSection";
@@ -33,9 +34,7 @@ const YoutubeSearchContent = async ({query}) => {
         ):(
           <>
 
-            <div className="error-message w-full flex justify-center items-center bg-red-600/10 h-16 rounded-lg border-[1px] border-red-500/20">
-              <p>There is no valid content related to search..</p>
-            </div>
+            <ContentNotFoundError conent='There is no valid content related to search..' />
             
             <div className="youtube-channel-section mt-8">
               {/* youtube channel section */}
