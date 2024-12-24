@@ -4,6 +4,7 @@ import React from 'react'
 
 const page = async ({params}) => {
 
+  let isLoading = true;
   const searchTag = (await params).tag;
   let contents = null;
 
@@ -11,9 +12,11 @@ const page = async ({params}) => {
 
   if(res.ok){
     contents = await res.json();
+    isLoading = false;
   }
   
   return (
+    
     <div className='mt-10'>
       {
         contents ? (

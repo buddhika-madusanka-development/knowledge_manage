@@ -1,3 +1,4 @@
+import YoutubeChannelSkeleton from "@/components/layouts/Skeletons/YoutubeChannelSkeleton";
 import HeroSection from "@/components/UI/Home/HeroSection";
 import YoutubeChannelSection from "@/components/UI/Home/YoutubeChannelSection";
 import YoutubeContentSection from "@/components/UI/Home/YoutubeContentSection";
@@ -15,7 +16,7 @@ export default async function Home({searchParams}) {
         {/* import hero section */}
         <HeroSection />
       </div>
-
+      
       {
         query ? (
           <>
