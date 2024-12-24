@@ -8,7 +8,7 @@ const YoutubeContentSection = async () => {
     const res = await fetch('http://localhost:3000/api/content');
     if(res.ok){
         contents = await res.json();
-        contents = contents.slice(0, 12);
+        contents = contents.slice(0,12);
     }
     
   return (
