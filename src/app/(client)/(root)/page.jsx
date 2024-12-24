@@ -1,9 +1,13 @@
 import HeroSection from "@/components/UI/Home/HeroSection";
 import YoutubeChannelSection from "@/components/UI/Home/YoutubeChannelSection";
 import YoutubeContentSection from "@/components/UI/Home/YoutubeContentSection";
+import YoutubeSearchContent from "@/components/UI/Home/YoutubeSearchContent";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home({searchParams}) {
+
+  const query = (await searchParams).query || '';
+  
   return (
     <div>
 
@@ -12,15 +16,27 @@ export default function Home() {
         <HeroSection />
       </div>
 
-      <div className="youtube-channel-section">
-        {/* youtube channel section */}
-        <YoutubeChannelSection />
-      </div>
+      {
+        query ? (
+          <>
+            <YoutubeSearchContent query = {query} />
+          </>
+        ): (
+          <>
+            <div className="youtube-channel-section">
+              {/* youtube channel section */}
+              <YoutubeChannelSection />
+            </div>
 
-      <div className="youtube-content-section mt-16">
-        {/* youtube content section */}
-        <YoutubeContentSection />
-      </div>
+            <div className="youtube-content-section mt-16">
+              {/* youtube content section */}
+              <YoutubeContentSection />
+            </div>
+          </>
+        )
+      }
+      
+
 
       
     </div>

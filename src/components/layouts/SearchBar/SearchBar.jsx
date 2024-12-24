@@ -1,13 +1,18 @@
-"use client"
-
+import Form from 'next/form'
+import { Input } from 'postcss'
 import React from 'react'
 
-const SearchBar = () => {
+const SearchBar = ({query}) => {
   return (
-    <div className='w-full flex'>
-        <input type="text" placeholder='Search for content' className='w-full h-12 px-4 rounded-lg rounded-r-none focus:outline-none text-mute bg-mute border-[1px] border-accent' />
-        <button className='bg-accent text-white px-8 py-2 rounded-lg rounded-l-none'>Search</button>
-    </div>
+    <Form className='w-4/5 mx-auto flex'>
+      <input 
+        name='query'
+        defaultValue={query}
+        placeholder='What you need to know about ?'
+        className='bg-mute h-12 px-5 w-4/5 rounded-l-lg border-[1px] border-accent text-mute focus:outline-none'
+      />
+      <button type='submit' className='w-1/4 bg-accent rounded-r-lg'>Search</button>
+    </Form>
   )
 }
 
