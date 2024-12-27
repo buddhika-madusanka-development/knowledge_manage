@@ -24,7 +24,7 @@ const page = async ({params}) => {
         {/* video section */}
         <div className="w-full md:w-2/3">
           <iframe
-            src="https://www.youtube.com/embed/Hej48pi_lOc?si=E9aTOa_VOQyvP_lf"
+            src={content?.contentLink}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -45,7 +45,7 @@ const page = async ({params}) => {
             }
           </div>
           
-          <p className="text-sm text-mute mt-6">{content?.contentDescription}</p>
+          <p className="text-sm text-mute mt-6">{content?.contentAdditionalNotes}</p>
         </div>
       </div>
 

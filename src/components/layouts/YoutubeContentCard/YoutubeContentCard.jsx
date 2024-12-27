@@ -19,14 +19,15 @@ const YoutubeContentCard = ({ content }) => {
             referrerPolicy="strict-origin-when-cross-origin"
             className="aspect-video w-full"
             ></iframe>
-            <div className="bg-transparent w-full aspect-video absolute top-0 left-0"></div>
+
+            <Link href={`/contents/${content?.contentId}`}>
+              <div className="bg-transparent w-full aspect-video absolute top-0 left-0"></div>
+            </Link>
         </div>
 
         <Link href={`/contents/${content?.contentId}`}>
           <div className="content-details mt-5">
-            <Link href={`/contents/${content?.contentId}`}>
-              <h1 className="font-bold line-clamp-2">{content?.contentTitle}</h1>
-            </Link>
+            <h1 className="font-bold line-clamp-2">{content?.contentTitle}</h1>
             <p className="text-sm text-mute line-clamp-3 mt-2">
               {content?.contentAdditionalNotes}
             </p>
