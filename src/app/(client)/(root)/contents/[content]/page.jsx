@@ -4,6 +4,8 @@ import HighliteTitle from "@/components/common/Titles/HighliteTitle";
 import RelatedContentSection from "@/components/UI/SingleContent/RelatedContentSection";
 import React from "react";
 
+export const runtime = "edge";
+
 const page = async ({params}) => {
 
   let availability = false;

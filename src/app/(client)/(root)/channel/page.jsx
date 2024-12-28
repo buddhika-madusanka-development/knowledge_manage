@@ -6,14 +6,19 @@ const page = async () => {
 
   let changels = null;
   let avaliability = false;
-  const res = await fetch('http://localhost:3000/api/channel');
-
-  if(res.ok){
-    changels = await res.json();
-
-    if(changels.length > 0) avaliability = true;
-
+  try {
+    const res = await fetch('http://localhost:3000/api/channel');
+    if(res.ok){
+      changels = await res.json();
+  
+      if(changels.length > 0) avaliability = true;
+  
+    }
   }
+  catch(err) {
+    console.log(err);
+  }
+
   
   return (
 
