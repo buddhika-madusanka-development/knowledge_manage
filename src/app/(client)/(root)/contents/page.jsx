@@ -6,11 +6,17 @@ const page = async () => {
 
   let contents = null;
   let availability = false;
-  const res =  await fetch('http://localhost:3000/api/content');
 
-  if(res.ok) {
-    contents = await res.json();
-    if(contents.length > 0) availability = true; 
+  try{
+    const res =  await fetch('http://localhost:3000/api/content');
+  
+    if(res.ok) {
+      contents = await res.json();
+      if(contents.length > 0) availability = true; 
+    }
+  }
+  catch(err){
+    console.log(err);
   }
   
   return (
