@@ -4,8 +4,6 @@ import Link from "next/link";
 import React from "react";
 
 const YoutubeContentCard = ({ content }) => {
-
-  console.log(content);
    
   return (
     content?.contentLink &&
