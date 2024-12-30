@@ -2,6 +2,8 @@ import ContentNotFoundError from '@/components/common/ContentNotFoundError';
 import YoutubeChannelCard from '@/components/layouts/YoutubeChannelCard/YoutubeChannelCard';
 import React from 'react'
 
+export const dynamic = 'force-dynamic'
+
 const page = async () => {
 
   let changels = null;
@@ -10,6 +12,7 @@ const page = async () => {
     const res = await fetch('http://localhost:3000/api/channel');
     if(res.ok){
       changels = await res.json();
+      console.log(changels);
   
       if(changels.length > 0) avaliability = true;
   

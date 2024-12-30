@@ -2,6 +2,8 @@ import ContentNotFoundError from '@/components/common/ContentNotFoundError';
 import YoutubeContentCard from '@/components/layouts/YoutubeContentCard/YoutubeContentCard';
 import React from 'react'
 
+export const dynamic = 'force-dynamic';
+
 const page = async () => {
 
   let contents = null;
@@ -12,6 +14,7 @@ const page = async () => {
   
     if(res.ok) {
       contents = await res.json();
+      console.log(contents);
       if(contents.length > 0) availability = true; 
     }
   }
